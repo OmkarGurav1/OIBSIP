@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Omkar Gurav – Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f') no-repeat center center/cover;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .skill {
+      width: 220px;
+      padding: 15px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .skill h3 {
+      margin: 0 0 10px;
+    }
+    .bar {
+      background: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .bar div {
+      height: 10px;
+      background: #0077cc;
+    }
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .project {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    .resume-btn {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .resume-btn a {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .resume-btn a:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Omkar Gurav</h1>
+    <p>Junior Software Engineer | IAM Engineer | Freelancer</p>
+  </header>
+
+  <section class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <h3>HTML & CSS</h3>
+        <div class="bar"><div style="width: 95%"></div></div>
+      </div>
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <div class="bar"><div style="width: 90%"></div></div>
+      </div>
+      <div class="skill">
+        <h3>Python</h3>
+        <div class="bar"><div style="width: 85%"></div></div>
+      </div>
+      <div class="skill">
+        <h3>IAM</h3>
+        <div class="bar"><div style="width: 80%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Projects</h2>
+    <div class="portfolio">
+      <div class="project">
+        <h3>Responsive Portfolio Site</h3>
+        <p>A fully responsive and accessible personal portfolio.</p>
+      </div>
+      <div class="project">
+        <h3>Shopping Cart</h3>
+        <p>An e-commerce platform built with Java & Spring.</p>
+      </div>
+      <div class="project">
+        <h3>Startup Landing Page</h3>
+        <p>Conversion-optimized one-pager for SaaS companies.</p>
+      </div>
+      <div class="project">
+        <h3>Analytics Dashboard</h3>
+        <p>Interactive dashboard with charts using Excel and PowerBI.</p>
+      </div>
+    </div>
+
+    <div class="resume-btn">
+      <a href="#" download>Download Resume</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Contact Me</h2>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent!');">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+</body>
+</html>
+<!-- Created by Omkar Gurav | Portfolio Project 2025 -->
